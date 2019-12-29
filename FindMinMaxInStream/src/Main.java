@@ -1,8 +1,6 @@
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.BiConsumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -28,6 +26,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        Function<Object, Integer> ifTrue = obj -> 0;
         List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
 
         findMinMax(numbers.stream(), new Comparator<Integer>() {

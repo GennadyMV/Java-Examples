@@ -11,6 +11,7 @@ public class Main {
                 }
             }
         }
+        System.out.println();
     }
 
     public static boolean areAnagrams(String a, String b) {
@@ -22,7 +23,8 @@ public class Main {
         char[] c1 = a.toCharArray();
         char[] c2 = b.toCharArray();
         bubbleSort(c1);
-        bubbleSort(c2);
+//        bubbleSort(c2);
+        bubbleS(c2);
         String sc1 = new String(c1);
         String sc2 = new String(c2);
         return sc1.equals(sc2);
@@ -31,6 +33,28 @@ public class Main {
     public static void main(String[] args) {
         System.out.println(areAnagrams("Апельсин", "Спаниель"));
     }
+
+    private static void bubbleS(char[] s) {
+        int len = s.length;
+        if (len > 0) {
+            char temp = 0;
+            for (int i = 0; i < len; i++) {
+                for (int j = 1; j < len - i; j++) {
+                    if (s[j - 1] > s[j]) {
+                        temp = s[j - 1];
+                        s[j - 1] = s[j];
+                        s[j] = temp;
+
+                    }
+                }
+
+
+            }
+        }
+        System.out.println(s);
+
+    }
+
 }
 
 /*

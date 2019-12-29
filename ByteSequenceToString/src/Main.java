@@ -13,7 +13,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        String hexString = "d0 a1 d0 a2 d0 95 d0 9f d0 98 d0 9a 3a 29".replace(" ", "");
+        String hexString = "d0 a1 d0 a2 d0 95 d0 9f d0 98 d0 9a 3a 29";//.replace(" ", "");
         try {
             System.out.println(new String(hexStringToByteArray(hexString), "UTF-8"));
         } catch (UnsupportedEncodingException e) {
